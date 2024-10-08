@@ -20,4 +20,17 @@ module tt_um_example (
     input  wire       rst_n     // reset_n - low to reset
 );
 
+wire INn, INp, CMP, EN, not_EN, Op, On, Pr; //internals nets
+not IV1 (INn, Vip);
+not IV2 (INn, CMP);
+not IV3 (INp, Vin);
+not IV4 (INp, CMP);
+not IV5 (Op, INn);
+not IV6 (On, INp);
+not IV7 (not_EN, EN);
+xor XOR1 (EN, Op, On);
+bufif1 BT1 (Pr, EN, Op);
+notif1 IT1 (CMP, not_EN, Op);
+buf Buf1 (Out, Pr);
+    
 endmodule
