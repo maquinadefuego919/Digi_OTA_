@@ -19,6 +19,14 @@ module tt_um_example (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
+output  wire Out;
+input wire Vip, Vin;
+    
+assign [0] uo_out  = Out;
+assign [0] ui_in  =Vip;
+assign [1] ui_in  =Vin;
+
+
 
 wire INn, INp, CMP, EN, not_EN, Op, On, Pr; //internals nets
 not IV1 (INn, Vip);
