@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Digi_OTA_"      # Project title
+  title:        "tt_um_Digi_OTA_"      # Project title
   author:       "Abner"      # Your name
   discord:      "deftbuzzard2997"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Low_Voltage Operational Transconductance amplifier"      # One line description of what your project does
@@ -19,7 +19,7 @@ project:
 
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
-    - "Digi_OTA_.v"
+    - "tt_um_Digi_OTA_.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
