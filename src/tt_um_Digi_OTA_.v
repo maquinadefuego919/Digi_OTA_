@@ -19,26 +19,6 @@ module tt_um_Digi_OTA_ (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
-output  wire Out;
-input wire Vip, Vin;
-    
-assign [0] uo_out  = Out;
-assign [0] ui_in  =Vip;
-assign [1] ui_in  =Vin;
 
-
-
-wire INn, INp, CMP, EN, not_EN, Op, On, Pr; //internals nets
-not IV1 (INn, Vip);
-not IV2 (INn, CMP);
-not IV3 (INp, Vin);
-not IV4 (INp, CMP);
-not IV5 (Op, INn);
-not IV6 (On, INp);
-not IV7 (not_EN, EN);
-xor XOR1 (EN, Op, On);
-bufif1 BT1 (Pr, EN, Op);
-notif1 IT1 (CMP, not_EN, Op);
-buf Buf1 (Out, Pr);
     
 endmodule
