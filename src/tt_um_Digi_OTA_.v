@@ -22,11 +22,13 @@ module tt_um_Digi_OTA_ (
 
 wire Vip, Vin, Out;
 
-assign Vip = ui_in[0];
-assign Vin = ui_in[1];
+assign Vip = ua[0];
+assign Vin = ua[1];
     
-assign uo_out[0]  = Out;  
-assign uo_out[7:1] = 7'b0000000; 
+assign ua[2]  = Out;  
+assign uo_out[7:0] = 8'b00000000; 
+assign ui_in[7:0] = 8'b00000000;
+    
 
 wire INn, INp, INn_CMP, INp_CMP, CMP, EN, not_EN, Op, On, INn_AND, INp_AND; //internals nets 
 not IV1(INn, Vip);    
