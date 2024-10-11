@@ -24,8 +24,8 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "Vip"
-  ui[1]: "Vin"
+  ui[0]: "0"
+  ui[1]: "0"
   ui[2]: "0"
   ui[3]: "0"
   ui[4]: "0"
@@ -34,7 +34,7 @@ pinout:
   ui[7]: "0"
 
   # Outputs
-  uo[0]: "Out"
+  uo[0]: "0"
   uo[1]: "0"
   uo[2]: "0"
   uo[3]: "0"
@@ -54,9 +54,9 @@ pinout:
   uio[7]: "0"
 
   # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
-  ua[0]: "0"
-  ua[1]: "0"
-  ua[2]: "0"
+  ua[0]: "Vip"
+  ua[1]: "Vin"
+  ua[2]: "Out"
   ua[3]: "0"
   ua[4]: "0"
   ua[5]: "0"
