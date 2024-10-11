@@ -49,9 +49,9 @@ notif1 IT1(CMP, not_EN, Op);
     
 bufif1 BT1(Out, EN, Op);  
 
-//assign uio_out = 0;
-//assign uio_oe  = 0;
+assign uio_out = 0;
+assign uio_oe  = 0;
     
-//wire _unused = &{ui_in[7:2], ena, clk, rst_n, uio_in};
+wire _unused = &{ui_in[7:2], ena, clk, rst_n, uio_in};
     
 endmodule
