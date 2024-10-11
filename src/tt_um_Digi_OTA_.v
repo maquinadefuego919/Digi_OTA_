@@ -26,9 +26,9 @@ assign Vip = ua[0];
 assign Vin = ua[1];
     
 assign ua[2]  = Out;  
-assign uo_out[7:0] = 8'b00000000; 
+//assign uo_out[7:0] = 8'b00000000; 
 //assign ui_in[7:0] = 8'b00000000;
-    assign ua[5:3]= 3'b000;
+//assign ua[5:3]= 3'b000;
 
 wire INn, INp, INn_CMP, INp_CMP, CMP, EN, not_EN, Op, On, INn_AND, INp_AND; //internals nets 
 not IV1(INn, Vip);    
@@ -51,6 +51,10 @@ bufif1 BT1(Out, EN, Op);
 
 assign uio_out = 0;
 assign uio_oe  = 0;
+
+assign uo_out[7:0] = 8'b00000000; 
+//assign ui_in[7:0] = 8'b00000000;
+assign ua[5:3]= 3'b000;
     
 wire _unused = &{ui_in[7:2], ena, clk, rst_n, uio_in};
     
