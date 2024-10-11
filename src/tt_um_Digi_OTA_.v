@@ -47,5 +47,7 @@ notif1 IT1(CMP, not_EN, Op);
     
 bufif1 BT1(Out, EN, Op);  
 
+assign uio_out = 0;
+assign uio_oe  = 0;
     
 endmodule
