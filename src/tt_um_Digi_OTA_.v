@@ -26,7 +26,7 @@ wire Vip, Vin, Out;
 assign Vin = ua[1];
     
 assign Out  = ua[2];  
-assign ua[5:3] = 3'b000;
+//assign ua[5:3] = 3'b000;
 assign uo_out[7:0] = 8'b00000000; 
 assign ui_in[7:0] = 8'b00000000;
 
