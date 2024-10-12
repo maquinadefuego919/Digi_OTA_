@@ -6,7 +6,7 @@
 `default_nettype none
 
 module tt_um_Digi_OTA_ (
-   // input  wire       VGND,
+    input  wire       VGND,
    // input  wire       VDPWR,    // 1.8v power supply
 //    input  wire       VAPWR,    // 3.3v power supply
     input  wire [7:0] ui_in,    // Dedicated inputs
@@ -26,7 +26,7 @@ assign ua[0] = Vip;
 assign ua[1] = Vin;
     
 assign ua[2]  = Out;  
-    assign ua[5:3]= 3'b000;
+    //assign ua[5:3]= 3'b000;
 assign uo_out[7:0] = 8'b00000000; 
 assign ui_in[7:0] = 8'b00000000;
 
@@ -55,6 +55,6 @@ not IV1(INn, Vip);
     assign uio_oe  = 0;
     
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, 1'b0};
+  //wire _unused = &{ena, clk, rst_n, 1'b0};
     
 endmodule
