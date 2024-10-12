@@ -76,8 +76,8 @@ not IV1(INn, Vip);
 //bufif1 BT1 (Pr, EN, Op);
 //notif1 IT1 (CMP, not_EN, Op);
    
-  assign uio_out = 0;
-    assign uio_oe  = 0;
+  //assign uio_out = 0;
+    //assign uio_oe  = 0;
     
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
