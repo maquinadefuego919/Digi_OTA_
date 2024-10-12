@@ -7,7 +7,7 @@
 
 module tt_um_Digi_OTA_ (
     input  wire       VGND,
-    input  wire       VDPWR,    // 1.8v power supply
+   // input  wire       VDPWR,    // 1.8v power supply
 //    input  wire       VAPWR,    // 3.3v power supply
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
