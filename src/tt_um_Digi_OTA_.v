@@ -22,11 +22,11 @@ module tt_um_Digi_OTA_ (
 
 wire Vip, Vin, Out;
 
-assign ua[0] = Vip;
-assign ua[1] = Vin;
+assign Vip = ua[0];
+    assign Vin = ua[1];
     
 assign ua[2]  = Out;  
-    assign ua[5:3]= 3'b000;
+   // assign ua[5:3]= 3'b000;
 //assign uo_out[7:0] = 8'b00000000; 
 //assign ui_in[7:0] = 8'b00000000;
 
