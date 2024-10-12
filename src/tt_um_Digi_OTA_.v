@@ -30,7 +30,7 @@ assign Out  = ua[2];
 //assign uo_out[7:0] = 8'b00000000; 
 assign ui_in[7:0] = 8'b00000000;
 
- wire INn, INp, INn_CMP, INp_CMP, CMP, EN, not_EN, Op, On,; //internals nets 
+ wire INn, INp, INn_CMP, INp_CMP, CMP, EN, not_EN, Op, On; //internals nets 
 not IV1(INn, Vip);    
 not INV2(INn_CMP,CMP);
 not IV3(INp, Vin);
