@@ -27,8 +27,8 @@ assign Vin = ua[1];
     
 assign Out  = ua[2];  
 assign ua[5:3] = 3'b000;
-assign uo_out[7:0] = 8'b00000000; 
-assign ui_in[7:0] = 8'b00000000;
+//assign uo_out[7:0] = 8'b00000000; 
+//assign ui_in[7:0] = 8'b00000000;
 
  wire INn, INp, INn_CMP, INp_CMP, CMP, EN, not_EN, Op, On,; //internals nets 
 not IV1(INn, Vip);    
