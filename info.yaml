@@ -4,7 +4,7 @@ project:
   author:       "Abner"      # Your name
   discord:      "deftbuzzard2997"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Low_Voltage Operational Transconductance amplifier"      # One line description of what your project does
-  language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
+  language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     10000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
