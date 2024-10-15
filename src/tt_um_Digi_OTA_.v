@@ -19,8 +19,9 @@ module tt_um_Digi_OTA_ (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
-wire vss=VDPWR;
-    
+//wire vss=VDPWR;
+     .VDD(VDPWR),
+        .VSS(VGND),
 wire Vip, Vin, Out;
 
   assign Vip = ua[0];
