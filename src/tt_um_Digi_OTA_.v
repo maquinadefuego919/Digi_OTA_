@@ -20,17 +20,18 @@ module tt_um_Digi_OTA_ (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-wire Vip, Vin, Out;
 
-  assign Vip = ua[0];
-    assign Vin = ua[1];
     
-    assign ua[2]  = Out;  
-//assign ua[5:3] = 3'b0;
-//assign uo_out[7:0] = 8'b00000000; 
-//assign ui_in[7:0] = 8'b00000000;
+wire Vip, Vin, Out;
+wire INn, INp, INn_CMP, INp_CMP, CMP, EN, not_EN, Op, On; //internals nets 
+    
+assign Vip = ua[0];
+assign Vin = ua[1];
+    
+assign ua[2]  = Out;  
+assign ua[5:3] = 3'b0;
 
- wire INn, INp, INn_CMP, INp_CMP, CMP, EN, not_EN, Op, On; //internals nets 
+
 not IV1(INn, Vip);    
 not INV2(INn_CMP,CMP);
 not IV3(INp, Vin);
@@ -39,9 +40,7 @@ not INV4(INp_CMP,CMP);
 nor NOR1(Op, INn, INn_CMP);
 nor NOR2(On, INp, INp_CMP);
     
-    //not IV5(Op, INn_AND);
-    //not IV6(On, INp_AND);
-    
+
 xor XOR1(EN, Op, On);
     
 not IV7(not_EN, EN);
@@ -51,14 +50,7 @@ bufif1 BT1(Out, EN, Op);
     
 
    
- // assign uio_out = 0;
-   // assign uio_oe  = 0;
-    
-  // List all unused inputs to prevent warnings
-//wire _unused = &{ena, clk, rst_n, 1'b0};
 
- // assign uo_out[0] = VGND;
-  //assign uo_out[1] = VGND;
   assign uo_out[2] = VGND;
   assign uo_out[3] = VGND;
   assign uo_out[4] = VGND;
