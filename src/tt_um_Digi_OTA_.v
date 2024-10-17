@@ -22,35 +22,35 @@ module tt_um_Digi_OTA_ (
 
 
     
-wire Vip, Vin, Out;
-wire INn, INp, INn_CMP, INp_CMP, CMP, EN, not_EN, Op, On; //internals nets 
+     wire Vip, Vin, Out;
+     wire INn, INp, INn_CMP, INp_CMP, CMP, EN, not_EN, Op, On; //internals nets 
     
-assign Vip = ua[0];
-assign Vin = ua[1];
+     assign Vip = ua[0];
+     assign Vin = ua[1];
     
-assign ua[2]  = Out;  
-assign ua[5:3] = 3'b0;
+     assign ua[2]  = Out;  
+     assign ua[5:3] = 3'b0;
 
 
-not IV1(INn, Vip);    
-not INV2(INn_CMP,CMP);
-not IV3(INp, Vin);
-not INV4(INp_CMP,CMP);
+     not IV1(INn, Vip);    
+     not INV2(INn_CMP,CMP);
+     not IV3(INp, Vin);
+     not INV4(INp_CMP,CMP);
 
-nor NOR1(Op, INn, INn_CMP);
-nor NOR2(On, INp, INp_CMP);
+     nor NOR1(Op, INn, INn_CMP);
+     nor NOR2(On, INp, INp_CMP);
     
 
-xor XOR1(EN, Op, On);
+     xor XOR1(EN, Op, On);
     
-not IV7(not_EN, EN);
-notif1 IT1(CMP, not_EN, Op);  
+     not IV7(not_EN, EN);
+     notif1 IT1(CMP, not_EN, Op);  
     
-bufif1 BT1(Out, EN, Op);   
+     bufif1 BT1(Out, EN, Op);   
     
 
-   
-
+  assign uo_out[0] = VGND;
+  assign uo_out[1] = VGND;
   assign uo_out[2] = VGND;
   assign uo_out[3] = VGND;
   assign uo_out[4] = VGND;
